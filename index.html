@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Tracker </title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- daisyUi -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- tailwind Css -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/8075efb750.js" crossorigin="anonymous"></script>
+
+
+</head>
+<body class="px-4">
+
+    <div class="container pt-3 px-2">
+
+        <!-- head -->
+        <h1 class="text-3xl font-semibold mt-10 mb-3">Job Application Tracker</h1>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mb-6 ">
+            <div class="py-2 px-4 card border-s-fuchsia-950">
+                <p class="text-xl">Total</p>
+                <h2 class="text-2xl">8</h2>
+            </div>
+            <div class="py-2 px-4 card border-s-fuchsia-950">
+                <p class="text-xl">Interview</p>
+                <h2 class="text-2xl text-green-500">8</h2>
+            </div>
+            <div class="py-2 px-4 card border-s-fuchsia-950">
+                <p class="text-xl">Rejected</p>
+                <h2 class="text-2xl text-red-500">8</h2>
+            </div>
+
+        </div>
+
+        <hr class="text-pink-950/25 mb-6">
+
+        <!-- jobs header-->
+        <div class="flex justify-between align-bottom mb-3">
+            <h2 class="font-bold text-xl">Available Jobs</h2>
+            <p id="totalCount">8 jobs </p>
+        </div>
+
+        <div class="tabs flex gap-1.5 mb-3">
+            <button id="totalJobs"  class="tab btn bg-blue-400 rounded-lg py-2 px-5 text-white font ">All</button>
+            <button id="interviewJobs" class="tab btn shadow-lg rounded-lg py-2 px-5 text-black ">Interview</button>
+            <button id="rejectedJobs" class="tab btn shadow-lg rounded-lg py-2 px-5 text-black  ">Rejected</button>
+        </div>
+
+        <!-- jobs -->
+        <div id="jobs-section" class="">
+            <div class="card py-3 px-5">
+                <div class="flex justify-between align-middle mb-2">
+                    <h2 class="font-bold text-xl">Mobile First Corp</h2>
+                    <i class="delete-btn fa-solid fa-trash cursor-pointer"></i>
+                </div>
+                <p class="mb-3">React Native Developer</p>
+                <p class="mb-2">Remote * Full-Time * $130,000 - $175,000</p>
+
+                <h3 class="py-2 px-3 bg-blue-100 text-xl w-40 rounded-lg mb-2">NOT APPLIED</h3>
+                
+                <p class="mb-2">Build cross-platform mobile application using React Native. Work on products used by millions of user</p>
+
+                <div class="flex gap-3">
+                    <button class="interview-btn border border-green-500 text-green-500 border-lg py-2 px-3 rounded-sm btn">INTERVIEW</button>
+                    <button class="rejected-btn border border-red-500 text-red-500 border-lg py-2 px-3 rounded-sm btn" >REJECTED</button>
+                </div>
+            </div>
+        </div>
+        
+        <div id="empty-section" class=" py-12 px-20">
+            <img width="100" class=" text-center" src="jobs.png" alt="">
+            <h2>No jobs available</h2>
+            <p>Check back soon for new job opportunites</p>
+        </div>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
+

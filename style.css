@@ -1,0 +1,22 @@
+@import 'tailwindcss';
+
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+*{
+    border: 1px solid black;
+    font-family: "Geist" , sans-serif;
+}
+body{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.card{
+    box-shadow: 1px 2px 3px 1px rgba(0,  0, 0 ,0.2);
+}
+#empty-section{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hidden{
+    
+}
