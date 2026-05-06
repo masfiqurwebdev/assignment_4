@@ -96,7 +96,7 @@ h2 {
 }
 
 .btn {
-  padding: 6px 10px;
+  padding: 10px 20px;
   margin-right: 5px;
   cursor: pointer;
   border: none;
@@ -104,13 +104,16 @@ h2 {
 }
 
 .green {
-  background: #28a745;
-  color: white;
+  border:1px solid #28a745;
+  color: #28a745;
+  background: transparent;
 }
 .red {
-  background: #dc3545;
-  color: white;
+  border:1px solid #dc3545;
+  color: #dc3545;
+  background: transparent;
 }
+
 .delete {
   color: black;
   background: transparent;
