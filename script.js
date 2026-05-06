@@ -87,19 +87,19 @@
   //   { id: 3, title: "UI Designer", company: "DesignPro", status: "not" }
   // ];
 
-  let currentFilter = "all";
+  let currentFilter ="all";
 
   function renderJobs() {
-    const list = document.getElementById("jobList");
-    list.innerHTML = "";
+    const list =document.getElementById("jobList");
+    list.innerHTML= "";
 
-    let filtered = jobs.filter(job => {
-      if (currentFilter === "all") return true;
-      return job.status === currentFilter;
+    let filtered= jobs.filter(job => {
+      if (currentFilter ==="all") return true;
+      return job.status ===currentFilter;
     });
 
-    if (filtered.length === 0) {
-      list.innerHTML = `
+    if (filtered.length ===0) {
+      list.innerHTML=`
 
       <div class="empty">
       <img class='doc' src="doc.png" alt="docement">
@@ -111,16 +111,16 @@
       return;
     }
 
-    filtered.forEach(job => {
+    filtered.forEach(job =>{
       const div = document.createElement("div");
       div.className = "job-card";
 
-      div.innerHTML = `
-        <button class="btn delete" onclick="deleteJob(${job.id})">Delete</button>
+      div.innerHTML =`
+        <button class="btn delete" onclick="deleteJob(${job.id})"><i class="fa-solid fa-trash"></i></button>
         <h3 class='company'>${job.company}</h3>
         <h4 class='role'>${job.role}</h4>
         <div class='job-det'>
-          <p>${job.location}</p>
+          <p>${job.location} </p>
           <p>${job.type}</p>
           <p>${job.salary}</p>
         </div>
@@ -131,48 +131,48 @@
         </span>
 
         <div>
-          <button class="btn green " onclick="setInterview(${job.id})">Interview</button>
-          <button class="btn red " onclick="setRejected(${job.id})">Reject</button>
+          <button class="btn green   " onclick="setInterview(${job.id})">Interview</button>
+          <button class="btn red   "  onclick="setRejected(${job.id})">Reject</button>
         </div>
       `;
 
       list.appendChild(div);
     });
 
-    updateStats();
+     updateStats();
   }
 
   function getStatusText(status) {
-    if (status === "not") return "Not Applied";
-    if (status === "interview") return "Interviewed";
-    if (status === "rejected") return "Rejected";
+    if (status=== "not")return"Not Applied";
+    if (status ==="interview") return"Interviewed";
+    if(status=== "rejected")  return "Rejected";
   }
 
   function setInterview(id) {
-    jobs = jobs.map(job =>
-      job.id === id ? { ...job, status: "interview" } : job
+    jobs =jobs.map(job =>
+      job.id === id ?{ ...job,status: "interview" } : job
     );
     renderJobs();
   }
 
-  function setRejected(id) {
-    jobs = jobs.map(job =>
-      job.id === id ? { ...job, status: "rejected" } : job
+  function setRejected(id){
+    jobs =jobs.map(job =>
+      job.id ===id? { ...job, status: "rejected" } : job
     );
     renderJobs();
   }
 
   function deleteJob(id) {
-    jobs = jobs.filter(job => job.id !== id);
+    jobs= jobs.filter(job => job.id !== id);
     renderJobs();
   }
 
-  function updateStats() {
+  function updateStats(){
     document.getElementById("total").innerText = jobs.length;
     document.getElementById("interview").innerText =
       jobs.filter(j => j.status === "interview").length;
     document.getElementById("rejected").innerText =
-      jobs.filter(j => j.status === "rejected").length;
+      jobs.filter(j =>j.status === "rejected").length;
   }
 
   // Tabs
@@ -181,8 +181,8 @@
       document.querySelectorAll(".tab").forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
 
-      currentFilter = btn.dataset.filter;
-      renderJobs();
+      currentFilter =btn.dataset.filter;
+      renderJobs() ;
     });
   });
 
