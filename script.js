@@ -99,7 +99,15 @@
     });
 
     if (filtered.length === 0) {
-      list.innerHTML = `<div class="empty">No jobs available</div>`;
+      list.innerHTML = `
+
+      <div class="empty">
+      <img class='doc' src="doc.png" alt="docement">
+        <h6 >No jobs available</h6>
+        <p>Check back soon for new job opportunities</p>
+      </div>
+
+      `;
       return;
     }
 
@@ -109,16 +117,22 @@
 
       div.innerHTML = `
         <button class="btn delete" onclick="deleteJob(${job.id})">Delete</button>
-        <h4>${job.title}</h4>
-        <p>${job.company}</p>
+        <h3 class='company'>${job.company}</h3>
+        <h4 class='role'>${job.role}</h4>
+        <div class='job-det'>
+          <p>${job.location}</p>
+          <p>${job.type}</p>
+          <p>${job.salary}</p>
+        </div>
 
+        <p class='job-des'>${job.description}</p>
         <span class="status ${job.status}">
           ${getStatusText(job.status)}
         </span>
 
         <div>
-          <button class="btn green" onclick="setInterview(${job.id})">Interview</button>
-          <button class="btn red" onclick="setRejected(${job.id})">Reject</button>
+          <button class="btn green " onclick="setInterview(${job.id})">Interview</button>
+          <button class="btn red " onclick="setRejected(${job.id})">Reject</button>
         </div>
       `;
 
