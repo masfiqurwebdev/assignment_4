@@ -34,9 +34,9 @@ Ans:
 It's a technique where you attach a single event listener to a parent element to handle events for its child elements using event bubbling.
 
 It's Usefull for:
-*Improves performance,
-*Works for dynamically added elements,
-*Cleaner and more maintainable code,
+1.Improves performance,
+2.Works for dynamically added elements,
+3.Cleaner and more maintainable code,
 
 
 ---------------------
