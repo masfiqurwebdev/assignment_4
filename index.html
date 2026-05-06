@@ -9,27 +9,26 @@
 </head>
 <body>
 
-  <div class="container">
-    <h1 class="title">Job Application Tracker</h1>
+<div class="container">
+  <h2>Job Application Tracker</h2>
 
-    <div class="stats">
-      <div class="box ">Total <h3  id="total">0</h3></div>
-      <div class="box ">Interview <h3 class="green" id="interview">0</h3></div>
-      <div class="box ">Rejected <h3 class="red" id="rejected">0</h3></div>
-    </div>
-
-    <hr >
-
-    <div class="tabs">
-      <button class="tab active " data-filter="all">All</button>
-      <button class="tab " data-filter="interview">Interview</button>
-      <button class="tab " data-filter="rejected">Rejected</button>
-    </div>
-
-    <div id="jobList "></div>
-
+  <!-- Stats -->
+  <div class="stats">
+    <div class="box">Total <h3 id="total">0</h3></div>
+    <div class="box">Interview <h3 id="interview">0</h3></div>
+    <div class="box">Rejected <h3 id="rejected">0</h3></div>
   </div>
 
+  <!-- Tabs -->
+  <div class="tabs">
+    <button class="tab active" data-filter="all">All</button>
+    <button class="tab" data-filter="interview">Interview</button>
+    <button class="tab" data-filter="rejected">Rejected</button>
+  </div>
+
+  <!-- Jobs -->
+  <div id="jobList"></div>
+</div>
   <script src="script.js"></script>
 </body>
 </html>

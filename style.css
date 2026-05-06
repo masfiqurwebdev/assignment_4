@@ -1,19 +1,9 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: sans-serif;
-}
-.green {
-  color: green;
-}
-.red {
-  color: red;
-}
 body {
+  font-family: Arial;
   background: #f4f6f8;
   padding: 20px;
 }
+
 .container {
   max-width: 900px;
   margin: auto;
@@ -21,16 +11,17 @@ body {
   padding: 20px;
   border-radius: 10px;
 }
-.title {
-  margin-top: 40px;
+
+h2 {
   text-align: center;
-  margin-bottom: 30px;
 }
+
 .stats {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
 }
+
 .box {
   flex: 1;
   margin: 5px;
@@ -38,12 +29,6 @@ body {
   border-radius: 8px;
   background: #eee;
   text-align: center;
-}
-.box-2 {
-  color: green;
-}
-hr {
-  margin-bottom: 30px;
 }
 
 .tabs {
@@ -76,4 +61,44 @@ hr {
   border-radius: 5px;
   margin: 10px 0;
   font-size: 12px;
+}
+
+.not {
+  background: #ddd;
+}
+.interview {
+  background: #28a745;
+  color: white;
+}
+.rejected {
+  background: #dc3545;
+  color: white;
+}
+
+.btn {
+  padding: 6px 10px;
+  margin-right: 5px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+.green {
+  background: #28a745;
+  color: white;
+}
+.red {
+  background: #dc3545;
+  color: white;
+}
+.delete {
+  background: black;
+  color: white;
+  float: right;
+}
+
+.empty {
+  text-align: center;
+  padding: 40px;
+  color: gray;
 }
